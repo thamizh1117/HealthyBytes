@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HealthyBytes{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <span class="brand-icon">🥗</span>
+                <span class="brand-name">HealthyBytes</span>
+            </div>
+            <p class="tagline">Your Personalized Calorie &amp; Nutrition Planner</p>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>HealthyBytes &mdash; estimates are based on standard formulas (Mifflin-St Jeor) and are for
+            informational purposes only. Consult a registered dietitian or physician for personalized medical advice.</p>
+        </div>
+    </footer>
+</body>
+</html>
